@@ -84,7 +84,7 @@ optional은 컴파일러에게 **이 object가 null을 담을 수도 있다**고
   
   car가 담고있는 non-null value에 대해 drive()를 호출한다. null인 경우 NPE를 던진다. 사용할 때 Think! Twice!하라고 !!이다...
   
-## Conditional statements
+## 4. Conditional statements
 
 코틀린의 프로그램들은 선형적으로 실행된다. (즉, 한 번에 한 줄씩 실행된다.)
 
@@ -98,7 +98,7 @@ optional은 컴파일러에게 **이 object가 null을 담을 수도 있다**고
 
 - else는 optional
 
-## Loops
+## 5. Loops
 
 - for
 - while
@@ -142,3 +142,33 @@ while (x > 10) { //무한히 true
 println("출력되지 못함")
 ```
 
+## 6. Functions
+
+코틀린은 functional programming 언어이기도 하기 때문에 함수를 중요시한다.
+
+프로그래밍은 **추상화되고 재사용될 수 있는 작은 코드** 단위들을 기반으로 한다. 그중 가장 작은 단위가 함수이다.
+
+```
+fun max(a: Int, b: Int): Int {
+  return if(a > b) a else b
+}
+```
+
+- fun 키워드 + 이름
+- 파라미터 목록 -> 코드 블록에서 사용 + 파라미터들의 data type
+- 함수의 return value data type 
+  - 하나 이상의 return type을 가질 수 없다.
+  - return type이 없을 수는 있다. 
+  ```
+  fun printMax(c: Int, d: Int) {
+    val maxValue = max(c, d) // call max **by its name**
+    println(maxValue)
+  }
+  ```
+  
+  
+  ## 7. Generics
+  
+ **여러 data type들을 같은 방식으로** 다룰 수 있을 때 **코드를 추상화**할 수 있는 좋은 방법!
+ 
+ 
